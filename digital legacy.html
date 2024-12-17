@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digital Legacy</title>
+<style>
+*{
+	text-decoration: none;
+}
+.navbar{
+	background:linear-gradient(to left, #000000, #00FF00); font-family: calibri; padding-right: 15px;padding-left: 15px;
+}
+ .navdiv{
+	 display: flex; align-items: center; justify-content: space-between;
+}
+ .logo a{
+	 font-size: 35px; font-weight: 600; color: white;
+}
+li{
+	 list-style: none; display: inline-block;
+}
+li a{
+	 color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+button{
+	 background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+}
+button a{
+	 color: white; font-weight: bold; font-size: 15px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #208265;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-color: black;
+  font-family: Doppio One;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the header */
+.header {
+  padding: 15px;
+  text-align: center;
+  background-image: url('image/wp2.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 35px;
+}
+
+.gallery {
+  --g: 6px; /* the gap */
+  
+  display: grid;
+  width: 450px; /* the size */
+  aspect-ratio: 1;
+  grid: auto-flow 1fr/repeat(3,1fr);
+  gap: var(--g);
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale();
+  cursor: pointer;
+  transition: .5s
+}
+.gallery img:hover {
+  filter: grayscale(0);
+}
+.gallery img:nth-child(2) {
+  grid-area: 1/2/span 2/span 2;
+  clip-path: polygon(0 0,100% 0,100% 100%,calc(50% + var(--g)/4) 100%,0 calc(50% - var(--g)/4))
+}
+.gallery img:nth-child(3) {
+  grid-area: 2/1/span 2/span 2;
+  clip-path: polygon(0 0,calc(50% - var(--g)/4) 0,100% calc(50% + var(--g)/4),100% 100%,0 100%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+</style>
+</head>
+<body bgcolor="#A8D08D">
+<nav class="navbar">
+	<div class="navdiv">
+		<div class="logo"><a href="index.html"><img src="image/NAB.png" width="20%" height="20%"></a> </div>
+		<ul>
+			<li><a href="aboutme.html">About Me</a></li>
+			<li><a href="myfellows.html">My Fellows</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="musicsection.html">Power of Music</a></li>
+			<li><a href="gallery.html">de'Galeria</a></li>
+				
+	</div>
+</nav>
+
+<div id="Menu" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#jy">Journey</a>
+  <a href="#scene">Scenery</a>
+  <a href="#ent">Entertainment</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Menu</button>  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("Menu").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("Menu").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<div class="header">
+  <h1><a name="jy">Journey</a></h1>
+  <p>|highlights of 2017-2024|</p>
+</div>
+
+<div class="container">
+  <div class="box">
+    <img src="image/passion12.jpg">
+    <span>DIY Project</span>
+  </div>
+  <div class="box">
+    <img src="image/passion4.jpg">
+    <span>Scenery</span>
+  </div>
+  <div class="box">
+    <img src="image/passion11.jpg">
+    <span>Music</span>
+  </div>
+  <div class="box">
+    <img src="image/passion5.jpg">
+    <span>K-pop Stuff</span>
+  </div>
+</div>
+
+<div class="header">
+  <h1>Moments</h1>
+  <p>|Vibes|</p>
+</div>
+<br>
+<br>
+
+<table align="center" cellpadding="10">
+<tr>
+<td>
+
+<table align="center">
+<tr>
+<td>
+<div class="gallery">
+  <img src="image/journey3.jpg">
+  <img src="image/journey1.jpg">
+  <img src="image/journey.jpg">
+  <img src="image/journey2.jpg">
+</div>
+</td>
+</tr>
+</table>
+
+<td>
+<table align="center">
+<th><a name="scene">my pov</a></th>
+<tr>
+<td>
+<div class="gallery">
+  <img src="image/scn.jpg">
+  <img src="image/scn1.jpg">
+  <img src="image/scn2.jpg">
+  <img src="image/scn3.jpg">
+</div>
+</td>
+</tr>
+</table>
+
+<tr>
+<td>
+<table align="center">
+<tr>
+<td>
+<div class="gallery">
+  <img src="image/passion9.jpg">
+  <img src="image/passion8.jpg">
+  <img src="image/passion2.jpg">
+  <img src="image/passion4.jpg">
+</div>
+</td>
+</tr>
+</table>
+</td>
+
+<td><table align="center">
+<th><a name="ent">entertainment</a></th>
+<tr>
+<td>
+<div class="gallery">
+  <img src="image/ent1.jpg">
+  <img src="image/ent2.jpg">
+  <img src="image/ent3.jpg">
+  <img src="image/ent.jpg">
+</div>
+</td>
+</tr>
+</table></td>
+
+</table>
+
+</body> 
+</html>

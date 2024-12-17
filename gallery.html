@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>de'Galleria</title>
+<style>
+*{
+	text-decoration: none;
+}
+.navbar{
+	background:linear-gradient(to left, #000000, #00FF00); font-family: calibri; padding-right: 15px;padding-left: 15px;
+}
+ .navdiv{
+	 display: flex; align-items: center; justify-content: space-between;
+}
+ .logo a{
+	 font-size: 35px; font-weight: 600; color: white;
+}
+li{
+	 list-style: none; display: inline-block;
+}
+li a{
+	 color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+button{
+	 background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+}
+button a{
+	 color: white; font-weight: bold; font-size: 15px;
+}
+
+body {font-family: Batang;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  font-family: Batang;
+  display: inline-block;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #006400;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  color: black;
+}
+
+</style>
+
+</head>
+
+<body bgcolor= "#E1F7D5">
+<a name="top"></a>
+<nav class="navbar">
+	<div class="navdiv">
+		<div class="logo"><a href="index.html"><img src="image/NAB.png" width="20%" height="20%"></a> </div>
+		<ul>
+			<li><a href="aboutme.html">About Me</a></li>
+			<li><a href="myfellows.html">My Fellows</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="musicsection.html">Power of Music</a></li>
+			<li><a href="gallery.html">de'Galeria</a></li>
+				
+	</div>
+</nav>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Photo')">Photos✧˖📷</button>
+  <button class="tablinks" onclick="openCity(event, 'Shorts')">Shorts✧˖📷</button>
+</div>
+
+<div id="Photo" class="tabcontent">
+  <h3>Photo</h3>
+  <table>
+    <tr>
+    <td><center><a href="#travel"><img src="image/3.png" width="200" height="150" border="3"></a></center></td>
+    <td><center><a href="#food"><img src="image/foodie.png" width="200" height="150" border="3"></a></center></td>
+    </tr>
+  </table>
+</div>
+
+<div id="Shorts" class="tabcontent">
+  <h3>Shorts</h3>
+  <table>
+    <tr>
+    <td><center><a href="#travel"><img src="image/3.png" width="200" height="150" border="3"></a></center></td>
+    <td><center><a href="#food"><img src="image/foodie.png" width="200" height="150" border="3"></a></center></td>
+    </tr>
+  </table> 
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<br>
+<br>
+
+<table align="center">
+<th bgcolor="#2F4F4F"><a name="travel"><font color="white"><b>Travel</b></font></a></th>
+<tr>
+<td>
+<table>
+    <tr>
+    <td><center><img src="image1/sb.jpg" width="80%"></center></td>
+    <td><center><img src="image1/sp2.jpg" width="80%"></center></td>
+    </tr>
+    <tr>
+    <td><center><img src="image1/sb3.jpg" width="80%"></center></td>
+    <td><center><img src="image1/sp4.jpg" width="80%"></center></td>
+    </tr>
+    <tr>
+    <td><center><img src="image1/sb4.jpg" width="80%"></center></td>
+    <td><center><img src="image1/sp1.jpg" width="80%" height="100%"></center></td>
+    </tr>
+    <tr>
+    <td><center><img src="image1/sb5.jpg" width="80%" height="100%"></center></td>
+    <td><center><img src="image1/sp5.jpg" width="80%" height="100%"></center></td>
+    </tr>
+    <tr>
+    <td><center><img src="image1/sb6.jpg" width="80%" height="100%"></center></td>
+    <td><center><img src="image1/sp6.jpg" width="80%" height="100%"></center></td>
+    </tr>
+    </table> 
+</td>
+<th bgcolor="#2F4F4F"><a name="travel"><font color="white">Travelog</font></a></th>
+<td>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/NfYaQMZfwPU?si=muZoYo3An6sBKbsS" title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</td>
+<td>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/7jzTN95qOM8?si=pSdt3VQ8b2db9mn7" title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</td>
+</tr>
+<br>
+<br>
+<th bgcolor="#2F4F4F"><a name="food"><font color="white"><b>Food</b></font></a></th>
+<tr>
+<td><table>
+    <tr>
+    <td><center><img src="image1/makan.jpg" width="80%"></center></td>
+    <td><center><img src="image1/makan1.jpg" width="80%"></center></td>
+    <td><center><img src="image1/makan2.jpg"  width="80%"></center></td>
+    </tr>
+    <tr>
+    <td><center><img src="image1/makan3.jpg" width="80%"></center></td>
+    <td><center><img src="image1/makan4.jpg" width="80%"></center></td>
+    <td><center><img src="image1/makan5.jpg" width="80%" height="100%"></center></td>
+    </tr>
+    <tr>
+    <td><center><img src="image1/makan6.jpg" width="80%"></center></td>
+    <td><center><img src="image1/makan7.jpg" width="80%" height="100%"></center></td>
+    <td><center><img src="image1/makan8.jpg" width="80%" height="100%"></center></td>
+    </tr>
+    <tr>
+    <td><center><img src="image1/makan9.jpg" width="80%" height="100%"></center></td>
+    <td><center><img src="image1/makan10.jpg" width="80%" height="100%"></center></td>
+    <td><center><img src="image1/makan11.jpg" width="80%" height="100%"></center></td>
+    </tr>
+    </table>
+</td>
+<th bgcolor="#2F4F4F"><a name="food"><font color="white">FoodieSnip</font></a></th>
+<td>
+<video width="200" height="400" controls autoplay>
+        <source src="video/fd.mp4">
+    </video>
+</td>
+</tr>
+</table>
+<a href="#top"><img src="image/button.png" width="80" align="right"></a>
+
+</body> 
+</html>

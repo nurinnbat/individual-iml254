@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Homepage</title>
+<style type="text/css">
+*{
+	text-decoration: none;
+}
+.navbar{
+	background:linear-gradient(to left, #000000, #00FF00); font-family: calibri; padding-right: 15px;padding-left: 15px;
+}
+ .navdiv{
+	 display: flex; align-items: center; justify-content: space-between;
+}
+ .logo a{
+	 font-size: 35px; font-weight: 600; color: white;
+}
+li{
+	 list-style: none; display: inline-block;
+}
+li a{
+	 color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+button{
+	 background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+}
+button a{
+	 color: white; font-weight: bold; font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('image/green.jpg');
+}
+
+.slideshow-container {
+  width: 80%;  /* Slideshow width, adjust as needed */
+  max-width: 800px; /* Optional: set a max width for the slideshow */
+  height: 60vh; /* Set the height of the slideshow (adjust as needed) */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: transparent; /* Background image for full page */
+  background-size: cover; /* Cover the entire page */
+  background-position: center;
+  border-radius: 15px; /* Optional: rounded corners */
+  margin: 0 auto; /* Center the slideshow horizontally */
+}
+
+.slides {
+  display: flex;
+  animation: slide 25s infinite; /* Animation duration and looping (adjusted for 5 slides) */
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 80%; /* Image width */
+  height: auto;
+  border-radius: 15px; /* Optional for rounded corners */
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-100%); }
+  40% { transform: translateX(-200%); }
+  60% { transform: translateX(-300%); }
+  80% { transform: translateX(-400%); }
+  100% { transform: translateX(0); }
+}
+
+</style>
+
+</head>
+<nav class="navbar">
+	<div class="navdiv">
+		<div class="logo"><a href="index.html"><img src="image/NAB.png" width="20%" height="20%"></a> </div>
+		<ul>
+			<li><a href="aboutme.html">About Me</a></li>
+			<li><a href="myfellows.html">My Fellows</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="musicsection.html">Power of Music</a></li>
+			<li><a href="gallery.html">de'Galeria</a></li>
+				
+	</div>
+</nav>
+<br>
+<br>
+<br>
+<body>
+<bgsound src="audio/pulang.mp3" hidden="true" autostart="true">
+
+<th><center><font face="verdana" color="#2F4F4F"><b>NURIN AMIRA BATRISYIA BT ASMAWI | 04L</b></font></center></th>
+<br>
+<!-- Content Wrapper: Ensures footer is pushed to the bottom -->
+<div class="content-wrapper">
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="image/me1.jpg">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="image1/sp4.jpg">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="image/me5.jpg">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="image/fam.jpg">
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img src="image/f2.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<br>
+<footer>
+<div style="background:linear-gradient(to left, #000000, #00FF00); font-family: calibri; color: white; text-align: center; padding: 20px;">
+    <p>&copy; 2024 My Website. All rights reserved.</p> 
+  <p>Follow and Contact me on: 
+   <a href="https://wa.me/1136414982" target="_blank_" style="color: white; text-decoration: none;">WhatsApp</a> |
+   <a href="https://www.instagram.com/whossnab_/" target="_blank_" style="color: white; text-decoration: none;">Instagram</a>
+  </p>
+</div>
+</footer>
+
+</body> 
+</html>
